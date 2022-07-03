@@ -54,8 +54,6 @@ tasks.withType(Test) {
             includeTags "BrowserStack"
         } else if (System.getProperty("testTag").equals("Mars")) {
             includeTags "Mars"
-        }else if (System.getProperty("testTag").equals("FreeSearch")) {
-            includeTags "FreeSearch"
         }
     }
 
