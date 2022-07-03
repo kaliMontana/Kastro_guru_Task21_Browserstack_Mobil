@@ -36,4 +36,17 @@ public class SearchWithWikipediaAppTests extends TestBase {
 						.shouldHave(CollectionCondition.sizeGreaterThan(0))
 		);
 	}
+
+	@Test
+	@Tag("FreeSearch")
+	public void freeSearchTest() {
+		step("Type search", () -> {
+			$(AppiumBy.accessibilityId("Search Wikipedia")).click();
+			$(AppiumBy.id("org.wikipedia.alpha:id/search_src_text")).sendKeys(System.getProperty("FreeSearch", "FreeSearch"));
+		});
+		step("Verify content found", () ->
+				$$(AppiumBy.className("android.widget.TextView"))
+						.shouldHave(CollectionCondition.sizeGreaterThan(0))
+		);
+	}
 }
