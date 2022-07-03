@@ -50,9 +50,9 @@ tasks.withType(Test) {
     systemProperties(System.getProperties())
 
     useJUnitPlatform() {
-        if (System.getProperty("nameTest").equals("BrowserStack")) {
+        if (System.getProperty("testName").equals("BrowserStack")) {
             includeTags "BrowserStack"
-        } else if (System.getProperty("nameTest").equals("Mars")) {
+        } else if (System.getProperty("testName").equals("Mars")) {
             includeTags "Mars"
         }
     }
