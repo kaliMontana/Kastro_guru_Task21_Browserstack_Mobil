@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 import static io.qameta.allure.Allure.step;
 
-public class SearchWithOldWikipediaAppTests extends TestBase {
+public class SearchWithWikipediaAppTests extends TestBase {
 
 	@Test
 	@Tag("BrowserStack")
